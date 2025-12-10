@@ -388,8 +388,8 @@ Katkıda bulunmak için:
 ## 📞 İletişim
 
 Sorularınız veya önerileriniz için:
-- **GitHub Issues**: [Issues sayfası](https://github.com/kullaniciadi/VirtualProgramming-Final_Project/issues)
-- **E-posta**: [e-posta adresi]
+- **GitHub Issues**: [Issues sayfası](https://github.com/keremmisik/VirtualProgramming-Final_Project/issues)
+- **E-posta**: [e-posta adresi](keremisik1010@gmail.com)
 
 ---
 

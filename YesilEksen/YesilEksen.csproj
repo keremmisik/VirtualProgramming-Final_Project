@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{60E1A148-9809-4CBF-9B1C-04C1E0E01CE5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>YesilEksen</RootNamespace>
+    <AssemblyName>YesilEksen</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPPlus, Version=8.3.1.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.8.3.1\lib\net462\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.Interfaces, Version=8.1.0.0, Culture=neutral, PublicKeyToken=a694d7f3b0907a61, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.Interfaces.8.1.0\lib\net462\EPPlus.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.3.0.1\lib\netstandard2.0\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QRCoder, Version=1.7.0.0, Culture=neutral, PublicKeyToken=c4ed5b9ae8358a28, processorArchitecture=MSIL">
+      <HintPath>..\packages\QRCoder.1.7.0\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.119.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\lib\net46\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.Cryptography.Xml, Version=8.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Xml.8.0.2\lib\net462\System.Security.Cryptography.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CiftlikDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CiftlikDetay.Designer.cs">
+      <DependentUpon>CiftlikDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ciftlikler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ciftlikler.Designer.cs">
+      <DependentUpon>Ciftlikler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FirmaDetay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FirmaDetay.Designer.cs">
+      <DependentUpon>FirmaDetay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Firmalar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Firmalar.Designer.cs">
+      <DependentUpon>Firmalar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Urunler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Urunler.Designer.cs">
+      <DependentUpon>Urunler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hakkimizda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hakkimizda.Designer.cs">
+      <DependentUpon>Hakkimizda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kartlar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Kartlar.Designer.cs">
+      <DependentUpon>Kartlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseHelper.cs" />
+    <Compile Include="ExcelHelper.cs" />
+    <Compile Include="Session.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sanayi\SanayiAlımTalebi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sanayi\SanayiAlımTalebi.Designer.cs">
+      <DependentUpon>SanayiAlımTalebi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sanayi\SanayiFirmaOnay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sanayi\SanayiFirmaOnay.Designer.cs">
+      <DependentUpon>SanayiFirmaOnay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sanayi\SanayiGenelRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sanayi\SanayiGenelRapor.Designer.cs">
+      <DependentUpon>SanayiGenelRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tarım\GenelRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tarım\GenelRapor.Designer.cs">
+      <DependentUpon>GenelRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SdkRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SdkRapor.Designer.cs">
+      <DependentUpon>SdkRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tarım\SdkRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tarım\SdkRapor.Designer.cs">
+      <DependentUpon>SdkRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tarım\ÇiftlikOnay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tarım\ÇiftlikOnay.Designer.cs">
+      <DependentUpon>ÇiftlikOnay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tarım\ÇitflikÜrünOnay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tarım\ÇitflikÜrünOnay.Designer.cs">
+      <DependentUpon>ÇitflikÜrünOnay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tarım\Çİftçi-Dasboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tarım\Çİftçi-Dasboard.Designer.cs">
+      <DependentUpon>Çİftçi-Dasboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Yardim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yardim.Designer.cs">
+      <DependentUpon>Yardim.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CiftlikDetay.resx">
+      <DependentUpon>CiftlikDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ciftlikler.resx">
+      <DependentUpon>Ciftlikler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FirmaDetay.resx">
+      <DependentUpon>FirmaDetay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Firmalar.resx">
+      <DependentUpon>Firmalar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hakkimizda.resx">
+      <DependentUpon>Hakkimizda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kartlar.resx">
+      <DependentUpon>Kartlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Sanayi\SanayiAlımTalebi.resx">
+      <DependentUpon>SanayiAlımTalebi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sanayi\SanayiFirmaOnay.resx">
+      <DependentUpon>SanayiFirmaOnay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sanayi\SanayiGenelRapor.resx">
+      <DependentUpon>SanayiGenelRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tarım\GenelRapor.resx">
+      <DependentUpon>GenelRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SdkRapor.resx">
+      <DependentUpon>SdkRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tarım\SdkRapor.resx">
+      <DependentUpon>SdkRapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tarım\ÇiftlikOnay.resx">
+      <DependentUpon>ÇiftlikOnay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tarım\ÇitflikÜrünOnay.resx">
+      <DependentUpon>ÇitflikÜrünOnay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tarım\Çİftçi-Dasboard.resx">
+      <DependentUpon>Çİftçi-Dasboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Urunler.resx">
+      <DependentUpon>Urunler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yardim.resx">
+      <DependentUpon>Yardim.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gemini_Generated_Image_fnul1lfnul1lfnul-removebg-preview 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\kerem.jpeg" />
+    <Content Include="Resources\Login_Image1.png" />
+    <Content Include="Resources\Login_Image2.png" />
+    <Content Include="Resources\mehmet.jpeg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Bu proje bu bilgisayarda eksik olan NuGet paketlerine başvuruyor. Bunları indirmek için NuGet Paket Geri Yükleme'yi etkinleştirin.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
+</Project>

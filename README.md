@@ -1,421 +1,424 @@
-# 🌿 Yeşil Eksen (Green Axis)
+# 🌿 Green Axis (Yeşil Eksen)
 
-**Tarımsal ve Endüstriyel Atık Yönetim Sistemi**
+**Agricultural and Industrial Waste Management System**
 
-Yeşil Eksen, tarımsal ve endüstriyel atık yönetim sürecini denetleyen ve yöneten bir admin platformudur. Bu sistem, çiftlikler, firmalar ve odalar arasındaki atık ticaretini yönetir ve sürdürülebilirlik etkisini ölçer.
-
----
-
-## 📋 İçindekiler
-
-- [Özellikler](#-özellikler)
-- [Sistem Gereksinimleri](#-sistem-gereksinimleri)
-- [Kurulum](#-kurulum)
-- [Kullanım](#-kullanım)
-- [Proje Yapısı](#-proje-yapısı)
-- [Veritabanı](#-veritabanı)
-- [Kullanıcı Rolleri](#-kullanıcı-rolleri)
-- [Teknolojiler](#-teknolojiler)
-- [Geliştirme](#-geliştirme)
-- [Katkıda Bulunma](#-katkıda-bulunma)
-- [Lisans](#-lisans)
+Green Axis is an administrative platform that monitors and manages the agricultural and industrial waste management process. This system manages waste trading between farms, companies, and chambers, and measures sustainability impact.
 
 ---
 
-## ✨ Özellikler
+## 📋 Table of Contents
 
-### 🏢 Firma Yönetimi
-- Firma kayıt ve onay süreçleri
-- Firma bilgileri yönetimi
-- Firma belgeleri yükleme ve görüntüleme
-- Firma listesi ve detay görüntüleme
-
-### 🌾 Çiftlik Yönetimi
-- Çiftlik kayıt ve onay süreçleri
-- Çiftlik bilgileri yönetimi
-- Çiftlik ürünleri yönetimi
-- Çiftlik belgeleri yükleme ve görüntüleme
-
-### 📦 Ürün Yönetimi
-- Tarımsal atık ürünleri kayıt
-- Ürün kategorileri yönetimi
-- Ürün miktarları takibi
-- Ürün belgeleri yönetimi
-
-### 📝 Alım Talepleri
-- Firmaların çiftliklerden ürün talep etme
-- Talep onay/red süreçleri
-- Talep durumu takibi
-- Talep geçmişi görüntüleme
-
-### 📊 Raporlama
-- **Genel Raporlar**: Sistem genelinde istatistikler
-- **SDG Raporları**: Sürdürülebilir Kalkınma Hedefleri raporları
-  - Geri kazanılan atık miktarı (ton)
-  - Engellenen CO₂ salınımı (ton)
-  - Ekonomiye kazandırılan değer (TL)
-- **Excel Dışa Aktarma**: Raporları Excel formatında dışa aktarma
-
-### 🔐 Kullanıcı Yönetimi
-- Rol tabanlı erişim kontrolü
-- Güvenli giriş sistemi
-- Kullanıcı oturum yönetimi
-- İşlem logları
-
-### 📄 Belge Yönetimi
-- PDF belge yükleme
-- Belge görüntüleme
-- Belge kategorileri
-- QR kod oluşturma
+- [Features](#-features)
+- [System Requirements](#-system-requirements)
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [Project Structure](#-project-structure)
+- [Database](#-database)
+- [User Roles](#-user-roles)
+- [Technologies](#-technologies)
+- [Development](#-development)
+- [Contributing](#-contributing)
+- [License](#-license)
 
 ---
 
-## 💻 Sistem Gereksinimleri
+## ✨ Features
 
-### Minimum Gereksinimler
-- **İşletim Sistemi**: Windows 7 veya üzeri
-- **.NET Framework**: 4.7.2 veya üzeri
+### 🏢 Company Management
+- Company registration and approval processes
+- Company information management
+- Company document upload and viewing
+- Company listing and detail viewing
+
+### 🌾 Farm Management
+- Farm registration and approval processes
+- Farm information management
+- Farm product management
+- Farm document upload and viewing
+
+### 📦 Product Management
+- Agricultural waste product registration
+- Product category management
+- Product quantity tracking
+- Product document management
+
+### 📝 Purchase Requests
+- Companies requesting products from farms
+- Request approval/rejection processes
+- Request status tracking
+- Request history viewing
+
+### 📊 Reporting
+- **General Reports**: System-wide statistics
+- **SDG Reports**: Sustainable Development Goals reports
+  - Recovered waste quantity (tons)
+  - Prevented CO₂ emissions (tons)
+  - Economic value added (TL)
+- **Excel Export**: Export reports in Excel format
+
+### 🔐 User Management
+- Role-based access control
+- Secure login system
+- User session management
+- Operation logs
+
+### 📄 Document Management
+- PDF document upload
+- Document viewing
+- Document categories
+- QR code generation
+
+---
+
+## 💻 System Requirements
+
+### Minimum Requirements
+- **Operating System**: Windows 7 or higher
+- **.NET Framework**: 4.7.2 or higher
 - **RAM**: 2 GB
-- **Disk Alanı**: 500 MB
-- **Ekran Çözünürlüğü**: 1024x768
+- **Disk Space**: 500 MB
+- **Screen Resolution**: 1024x768
 
-### Önerilen Gereksinimler
-- **İşletim Sistemi**: Windows 10/11
-- **RAM**: 4 GB veya üzeri
-- **Disk Alanı**: 1 GB
-- **Ekran Çözünürlüğü**: 1920x1080
+### Recommended Requirements
+- **Operating System**: Windows 10/11
+- **RAM**: 4 GB or higher
+- **Disk Space**: 1 GB
+- **Screen Resolution**: 1920x1080
 
 ---
 
-## 🚀 Kurulum
+## 🚀 Installation
 
-### 1. Projeyi İndirme
+### 1. Download the Project
 ```bash
-git clone https://github.com/kullaniciadi/VirtualProgramming-Final_Project.git
+git clone https://github.com/username/VirtualProgramming-Final_Project.git
 cd VirtualProgramming-Final_Project
 ```
 
-### 2. Visual Studio ile Açma
-1. `YesilEksen.sln` dosyasını Visual Studio ile açın
-2. Visual Studio otomatik olarak NuGet paketlerini geri yükleyecektir
-3. Eğer paketler yüklenmezse, Solution Explorer'da projeye sağ tıklayın ve "Restore NuGet Packages" seçeneğini seçin
+### 2. Open with Visual Studio
+1. Open the `YesilEksen.sln` file with Visual Studio
+2. Visual Studio will automatically restore NuGet packages
+3. If packages are not restored, right-click on the project in Solution Explorer and select "Restore NuGet Packages"
 
-### 3. Veritabanı Kurulumu
-- Uygulama ilk çalıştırıldığında otomatik olarak `YesilEksen.db` veritabanı dosyası oluşturulur
-- Veritabanı, uygulamanın çalıştığı klasörde (`bin\Debug` veya `bin\Release`) oluşturulur
+### 3. Database Setup
+- The `YesilEksen.db` database file is automatically created when the application is first run
+- The database is created in the application's execution folder (`bin\Debug` or `bin\Release`)
 
-### 4. Derleme ve Çalıştırma
-1. Visual Studio'da `F5` tuşuna basın veya "Start Debugging" butonuna tıklayın
-2. Uygulama derlenecek ve çalışacaktır
+### 4. Build and Run
+1. Press `F5` in Visual Studio or click the "Start Debugging" button
+2. The application will compile and run
 
-### 5. Test Kullanıcıları
-Uygulama ilk çalıştırıldığında otomatik olarak aşağıdaki test kullanıcıları oluşturulur:
+### 5. Test Users
+The following test users are automatically created when the application is first run:
 
-| Kullanıcı Adı | Şifre | Rol |
-|--------------|-------|-----|
-| `sanayi_admin` | `123456` | Sanayi Odası Admin |
-| `ziraat_admin` | `123456` | Ziraat Odası Admin |
-
----
-
-## 📖 Kullanım
-
-### Giriş Yapma
-1. Uygulamayı başlatın
-2. Kullanıcı adı ve şifrenizi girin
-3. "Giriş Yap" butonuna tıklayın
-4. Rolünüze göre ilgili dashboard'a yönlendirileceksiniz
-
-### Sanayi Odası Admin Paneli
-- **Firma Onay**: Başvuruda bulunan firmaları görüntüleyin ve onaylayın/reddedin
-- **Alım Talepleri**: Firmaların çiftliklerden yaptığı alım taleplerini yönetin
-- **Raporlama**: Genel raporlar ve SDG raporları oluşturun
-- **Firmalar**: Tüm firmaları listeleyin ve detaylarını görüntüleyin
-
-### Ziraat Odası Admin Paneli
-- **Çiftlik Onay**: Başvuruda bulunan çiftlikleri görüntüleyin ve onaylayın/reddedin
-- **Ürün Onay**: Çiftliklerin eklediği ürünleri onaylayın/reddedin
-- **Raporlama**: Genel raporlar ve SDG raporları oluşturun
-- **Çiftlikler**: Tüm çiftlikleri listeleyin ve detaylarını görüntüleyin
-
-### Firma Kullanıcısı
-- Firma bilgilerinizi görüntüleyin ve güncelleyin
-- Çiftliklerden ürün talep edin
-- Talep durumlarınızı takip edin
-- Belgelerinizi yükleyin
-
-### Çiftlik Kullanıcısı
-- Çiftlik bilgilerinizi görüntüleyin ve güncelleyin
-- Ürünlerinizi ekleyin ve yönetin
-- Gelen talepleri görüntüleyin
-- Belgelerinizi yükleyin
+| Username | Password | Role |
+|----------|----------|------|
+| `sanayi_admin` | `123456` | Industry Chamber Admin |
+| `ziraat_admin` | `123456` | Agriculture Chamber Admin |
 
 ---
 
-## 📁 Proje Yapısı
+## 📖 Usage
+
+### Logging In
+1. Launch the application
+2. Enter your username and password
+3. Click the "Login" button
+4. You will be redirected to the relevant dashboard based on your role
+
+### Industry Chamber Admin Panel
+- **Company Approval**: View and approve/reject companies that have applied
+- **Purchase Requests**: Manage purchase requests made by companies from farms
+- **Reporting**: Generate general reports and SDG reports
+- **Companies**: List all companies and view their details
+
+### Agriculture Chamber Admin Panel
+- **Farm Approval**: View and approve/reject farms that have applied
+- **Product Approval**: Approve/reject products added by farms
+- **Reporting**: Generate general reports and SDG reports
+- **Farms**: List all farms and view their details
+
+### Company User
+- View and update your company information
+- Request products from farms
+- Track your request statuses
+- Upload your documents
+
+### Farm User
+- View and update your farm information
+- Add and manage your products
+- View incoming requests
+- Upload your documents
+
+---
+
+## 📁 Project Structure
 
 ```
 VirtualProgramming-Final_Project/
 │
 ├── YesilEksen/
-│   ├── Sanayi/              # Sanayi Odası modülleri
+│   ├── Sanayi/              # Industry Chamber modules
 │   │   ├── SanayiFirmaOnay.cs
 │   │   ├── SanayiAlımTalebi.cs
 │   │   └── SanayiGenelRapor.cs
 │   │
-│   ├── Tarım/               # Ziraat Odası modülleri
+│   ├── Tarım/               # Agriculture Chamber modules
 │   │   ├── ÇiftlikOnay.cs
 │   │   ├── ÇitflikÜrünOnay.cs
 │   │   ├── Çİftçi-Dasboard.cs
 │   │   ├── GenelRapor.cs
 │   │   └── SdkRapor.cs
 │   │
-│   ├── Belgeler/            # PDF belgeler klasörü
+│   ├── Belgeler/            # PDF documents folder
 │   │
-│   ├── Resources/           # Görseller ve kaynaklar
+│   ├── Resources/           # Images and resources
 │   │
-│   ├── DatabaseHelper.cs    # Veritabanı işlemleri
-│   ├── ExcelHelper.cs       # Excel işlemleri
-│   ├── Session.cs           # Oturum yönetimi
-│   ├── Login.cs             # Giriş formu
-│   ├── Form1.cs             # Ana dashboard (Sanayi)
-│   ├── Firmalar.cs          # Firma listesi
-│   ├── Ciftlikler.cs        # Çiftlik listesi
-│   ├── Urunler.cs           # Ürün listesi
+│   ├── DatabaseHelper.cs    # Database operations
+│   ├── ExcelHelper.cs       # Excel operations
+│   ├── Session.cs           # Session management
+│   ├── Login.cs             # Login form
+│   ├── Form1.cs             # Main dashboard (Industry)
+│   ├── Firmalar.cs          # Company list
+│   ├── Ciftlikler.cs        # Farm list
+│   ├── Urunler.cs           # Product list
 │   └── ...
 │
-├── packages/                # NuGet paketleri
+├── packages/                # NuGet packages
 │
-└── YesilEksen.sln           # Visual Studio solution dosyası
+└── YesilEksen.sln           # Visual Studio solution file
 ```
 
 ---
 
-## 🗄️ Veritabanı
+## 🗄️ Database
 
-### Veritabanı Yapısı
+### Database Structure
 
-Uygulama SQLite veritabanı kullanır. Veritabanı dosyası (`YesilEksen.db`) uygulamanın çalıştığı klasörde otomatik olarak oluşturulur.
+The application uses SQLite database. The database file (`YesilEksen.db`) is automatically created in the application's execution folder.
 
-### Ana Tablolar
+### Main Tables
 
-- **Tbl_Firmalar**: Firma bilgileri
-- **Tbl_Ciftlikler**: Çiftlik bilgileri
-- **Tbl_Kullanicilar**: Kullanıcı bilgileri
-- **Tbl_CiftlikUrunleri**: Çiftlik ürünleri
-- **Tbl_AlimTalepleri**: Alım talepleri
-- **Tbl_CiftlikBelgeleri**: Çiftlik belgeleri
-- **Tbl_FirmaBelgeleri**: Firma belgeleri
-- **Tbl_UrunBelgeleri**: Ürün belgeleri
-- **Tbl_IslemLoglari**: İşlem logları
-- **Tbl_SdgRaporVerisi**: SDG rapor verileri
+- **Tbl_Firmalar**: Company information
+- **Tbl_Ciftlikler**: Farm information
+- **Tbl_Kullanicilar**: User information
+- **Tbl_CiftlikUrunleri**: Farm products
+- **Tbl_AlimTalepleri**: Purchase requests
+- **Tbl_CiftlikBelgeleri**: Farm documents
+- **Tbl_FirmaBelgeleri**: Company documents
+- **Tbl_UrunBelgeleri**: Product documents
+- **Tbl_IslemLoglari**: Operation logs
+- **Tbl_SdgRaporVerisi**: SDG report data
 
-### Lookup Tabloları
+### Lookup Tables
 
-- **Tbl_Sehirler**: Şehir listesi
-- **Tbl_Sektorler**: Sektör listesi
-- **Tbl_UrunKategorileri**: Ürün kategorileri
-- **Tbl_OnayDurumlari**: Onay durumları (Onay Bekliyor, Onaylandı, Reddedildi)
-- **Tbl_Roller**: Kullanıcı rolleri
+- **Tbl_Sehirler**: City list
+- **Tbl_Sektorler**: Sector list
+- **Tbl_UrunKategorileri**: Product categories
+- **Tbl_OnayDurumlari**: Approval statuses (Pending, Approved, Rejected)
+- **Tbl_Roller**: User roles
 
-### Veritabanı İşlemleri
+### Database Operations
 
-Veritabanı işlemleri `DatabaseHelper` sınıfı üzerinden yapılır:
+Database operations are performed through the `DatabaseHelper` class:
 
 ```csharp
-// Sorgu çalıştırma
+// Execute query
 DataTable dt = DatabaseHelper.ExecuteQuery("SELECT * FROM Tbl_Firmalar");
 
-// Veri ekleme/güncelleme/silme
+// Insert/update/delete data
 int result = DatabaseHelper.ExecuteNonQuery("INSERT INTO ...");
 
-// Tek değer alma
+// Get single value
 object count = DatabaseHelper.ExecuteScalar("SELECT COUNT(*) FROM ...");
 ```
 
 ---
 
-## 👥 Kullanıcı Rolleri
+## 👥 User Roles
 
-### 1. Firma (RolID: 1)
-- Firma bilgilerini görüntüleme ve güncelleme
-- Çiftliklerden ürün talep etme
-- Talep durumlarını takip etme
-- Belge yükleme
+### 1. Company (RoleID: 1)
+- View and update company information
+- Request products from farms
+- Track request statuses
+- Upload documents
 
-### 2. Çiftlik (RolID: 2)
-- Çiftlik bilgilerini görüntüleme ve güncelleme
-- Ürün ekleme ve yönetme
-- Gelen talepleri görüntüleme
-- Belge yükleme
+### 2. Farm (RoleID: 2)
+- View and update farm information
+- Add and manage products
+- View incoming requests
+- Upload documents
 
-### 3. Sanayi Odası Admin (RolID: 3)
-- Firma kayıtlarını onaylama/reddetme
-- Alım taleplerini yönetme
-- Genel raporlar oluşturma
-- SDG raporları oluşturma
-- Sistem istatistiklerini görüntüleme
+### 3. Industry Chamber Admin (RoleID: 3)
+- Approve/reject company registrations
+- Manage purchase requests
+- Generate general reports
+- Generate SDG reports
+- View system statistics
 
-### 4. Ziraat Odası Admin (RolID: 4)
-- Çiftlik kayıtlarını onaylama/reddetme
-- Ürün kayıtlarını onaylama/reddetme
-- Genel raporlar oluşturma
-- SDG raporları oluşturma
-- Sistem istatistiklerini görüntüleme
+### 4. Agriculture Chamber Admin (RoleID: 4)
+- Approve/reject farm registrations
+- Approve/reject product registrations
+- Generate general reports
+- Generate SDG reports
+- View system statistics
 
 ---
 
-## 🛠️ Teknolojiler
+## 🛠️ Technologies
 
-### Framework ve Platform
+### Framework and Platform
 - **.NET Framework 4.7.2**
 - **Windows Forms**
 - **C# 7.3**
 
-### Veritabanı
+### Database
 - **SQLite 1.0.119.0**
 - **System.Data.SQLite**
 
-### NuGet Paketleri
-- **EPPlus 8.3.1**: Excel dosya işlemleri
-- **QRCoder 1.7.0**: QR kod oluşturma
-- **System.Buffers 4.5.1**: Buffer yönetimi
-- **System.Memory 4.5.5**: Memory yönetimi
+### NuGet Packages
+- **EPPlus 8.3.1**: Excel file operations
+- **QRCoder 1.7.0**: QR code generation
+- **System.Buffers 4.5.1**: Buffer management
+- **System.Memory 4.5.5**: Memory management
 - **System.ComponentModel.Annotations 5.0.0**: Data annotations
-- **System.Security.Cryptography.Xml 8.0.2**: XML şifreleme
+- **System.Security.Cryptography.Xml 8.0.2**: XML encryption
 
-### Geliştirme Ortamı
-- **Visual Studio 2017 veya üzeri**
+### Development Environment
+- **Visual Studio 2017 or higher**
 - **.NET Framework 4.7.2 SDK**
 
 ---
 
-## 🔧 Geliştirme
+## 🔧 Development
 
-### Projeyi Geliştirme Ortamına Alma
+### Setting Up the Development Environment
 
-1. **Repository'yi klonlayın**
+1. **Clone the repository**
    ```bash
-   git clone https://github.com/kullaniciadi/VirtualProgramming-Final_Project.git
+   git clone https://github.com/username/VirtualProgramming-Final_Project.git
    ```
 
-2. **Visual Studio'da açın**
-   - `YesilEksen.sln` dosyasını açın
+2. **Open in Visual Studio**
+   - Open the `YesilEksen.sln` file
 
-3. **NuGet paketlerini geri yükleyin**
-   - Solution Explorer'da projeye sağ tıklayın
-   - "Restore NuGet Packages" seçeneğini seçin
+3. **Restore NuGet packages**
+   - Right-click on the project in Solution Explorer
+   - Select "Restore NuGet Packages"
 
-4. **Projeyi derleyin**
-   - `Ctrl+Shift+B` veya Build > Build Solution
+4. **Build the project**
+   - Press `Ctrl+Shift+B` or Build > Build Solution
 
-### Veritabanı Test Verileri
+### Database Test Data
 
-Test verileri eklemek için `DatabaseHelper` sınıfında bulunan `InsertSyntheticData()` metodunu kullanabilirsiniz. Bu metod:
-- 50+ şehir
-- 50+ sektör
-- 50+ ürün kategorisi
-- 50+ firma
-- 50+ çiftlik
-- 50+ kullanıcı
-- 50+ ürün
-- 50+ alım talebi
-- 50+ belge
-- 50+ işlem logu
-- 50+ SDG rapor verisi
+To add test data, you can use the `InsertSyntheticData()` method found in the `DatabaseHelper` class. This method adds:
+- 50+ cities
+- 50+ sectors
+- 50+ product categories
+- 50+ companies
+- 50+ farms
+- 50+ users
+- 50+ products
+- 50+ purchase requests
+- 50+ documents
+- 50+ operation logs
+- 50+ SDG report data entries
 
-ekler.
+### Code Standards
 
-### Kod Standartları
-
-- **İsimlendirme**: PascalCase (sınıflar, metodlar), camelCase (değişkenler)
-- **XML Dokümantasyon**: Tüm public metodlar XML dokümantasyonu içermelidir
-- **Hata Yönetimi**: Try-catch blokları kullanılmalı ve kullanıcıya anlamlı mesajlar gösterilmelidir
-- **Veritabanı**: Tüm veritabanı işlemleri `DatabaseHelper` sınıfı üzerinden yapılmalıdır
+- **Naming**: PascalCase (classes, methods), camelCase (variables)
+- **XML Documentation**: All public methods must include XML documentation
+- **Error Handling**: Try-catch blocks should be used and meaningful messages should be shown to users
+- **Database**: All database operations must be performed through the `DatabaseHelper` class
 
 ---
 
-## 🤝 Katkıda Bulunma
+## 🤝 Contributing
 
-Katkıda bulunmak için:
+To contribute:
 
-1. Bu repository'yi fork edin
-2. Yeni bir branch oluşturun (`git checkout -b feature/yeni-ozellik`)
-3. Değişikliklerinizi commit edin (`git commit -am 'Yeni özellik eklendi'`)
-4. Branch'inizi push edin (`git push origin feature/yeni-ozellik`)
-5. Bir Pull Request oluşturun
+1. Fork this repository
+2. Create a new branch (`git checkout -b feature/new-feature`)
+3. Commit your changes (`git commit -am 'Add new feature'`)
+4. Push to the branch (`git push origin feature/new-feature`)
+5. Create a Pull Request
 
-### Katkı Kuralları
+### Contribution Guidelines
 
-- Kod standartlarına uyun
-- Yeni özellikler için test yazın
-- README'yi güncelleyin
-- Anlamlı commit mesajları kullanın
-
----
-
-## 📝 Değişiklik Geçmişi
-
-### Versiyon 1.0.0
-- İlk sürüm
-- Temel firma ve çiftlik yönetimi
-- Onay süreçleri
-- Raporlama modülleri
-- Belge yönetimi
-- Excel dışa aktarma
+- Follow code standards
+- Write tests for new features
+- Update the README
+- Use meaningful commit messages
 
 ---
 
-## 🐛 Bilinen Sorunlar
+## 📝 Changelog
 
-- Veritabanı dosyası büyüdükçe performans düşebilir (gelecek sürümlerde optimize edilecek)
-- Çoklu kullanıcı desteği sınırlıdır (SQLite WAL modu kullanılıyor)
-
----
-
-## 🔮 Gelecek Özellikler
-
-- [ ] Web API entegrasyonu
-- [ ] Mobil uygulama desteği
-- [ ] Gelişmiş raporlama ve grafikler
-- [ ] E-posta bildirimleri
-- [ ] Çoklu dil desteği
-- [ ] Bulut veritabanı desteği
-- [ ] Otomatik yedekleme sistemi
+### Version 1.0.0
+- Initial release
+- Basic company and farm management
+- Approval processes
+- Reporting modules
+- Document management
+- Excel export
 
 ---
 
-## 📞 İletişim
+## 🐛 Known Issues
 
+- Database performance may decrease as the file grows (will be optimized in future versions)
+- Multi-user support is limited (SQLite WAL mode is used)
+
+---
+
+## 🔮 Future Features
+
+- [ ] Web API integration
+- [ ] Mobile application support
+- [ ] Advanced reporting and charts
+- [ ] Email notifications
+- [ ] Multi-language support
+- [ ] Cloud database support
+- [ ] Automatic backup system
+
+---
+
+## 📞 Contact
+
+<<<<<<< HEAD
+For questions or suggestions:
+- **GitHub Issues**: [Issues page](https://github.com/keremmisik/VirtualProgramming-Final_Project/issues)
+- **Email**: [email address](keremisik1010@gmail.com)
+=======
 Sorularınız veya önerileriniz için:
 - **GitHub Issues**: [Issues sayfası](https://github.com/keremmisik/VirtualProgramming-Final_Project/issues)
 - **E-posta**: [e-posta adresi](keremisik1010@gmail.com)
+>>>>>>> 71d934210defbecc40edebd16998da159871e773
 
 ---
 
-## 📄 Lisans
+## 📄 License
 
-Bu proje [MIT Lisansı](LICENSE) altında lisanslanmıştır.
-
----
-
-## 🙏 Teşekkürler
-
-- EPPlus ekibine Excel işlemleri için
-- QRCoder ekibine QR kod desteği için
-- SQLite ekibine veritabanı desteği için
-- Tüm katkıda bulunanlara
+This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-## 📚 Ek Kaynaklar
+## 🙏 Acknowledgments
 
-- [.NET Framework Dokümantasyonu](https://docs.microsoft.com/en-us/dotnet/framework/)
-- [SQLite Dokümantasyonu](https://www.sqlite.org/docs.html)
-- [EPPlus Dokümantasyonu](https://github.com/EPPlusSoftware/EPPlus)
-- [QRCoder Dokümantasyonu](https://github.com/codebude/QRCoder)
+- EPPlus team for Excel operations
+- QRCoder team for QR code support
+- SQLite team for database support
+- All contributors
 
 ---
 
-**Yeşil Eksen** - Sürdürülebilir bir gelecek için 🌱
+## 📚 Additional Resources
 
+- [.NET Framework Documentation](https://docs.microsoft.com/en-us/dotnet/framework/)
+- [SQLite Documentation](https://www.sqlite.org/docs.html)
+- [EPPlus Documentation](https://github.com/EPPlusSoftware/EPPlus)
+- [QRCoder Documentation](https://github.com/codebude/QRCoder)
+
+---
+
+**Green Axis** - For a sustainable future 🌱
